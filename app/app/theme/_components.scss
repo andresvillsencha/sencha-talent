@@ -1,0 +1,42 @@
+// Reusable grid, window, buttons, fields and pagination.
+.sm-card { background: $sm-surface; border: 1px solid $sm-border !important; border-radius: $sm-radius; box-shadow: $sm-shadow; overflow: hidden; }
+.sm-grid { background: $sm-surface; }
+.sm-grid .x-panel-body, .sm-grid .x-grid-view { background: $sm-surface; }
+.sm-grid .x-panel-header { background: $sm-surface !important; border-bottom: 1px solid $sm-border !important; padding: 15px 18px; }
+.sm-grid .x-panel-header-title, .sm-grid .x-title-text { color: $sm-text !important; font-size: 17px; font-weight: 700; }
+.sm-grid .x-column-header { background: #f7f9fc; border-right: 0; border-bottom: 1px solid $sm-border; }
+.sm-grid .x-column-header-inner { padding-top: 12px; padding-bottom: 12px; }
+.sm-grid .x-column-header-text { color: #50617d; font-size: 12px; font-weight: 700; }
+.sm-grid .x-grid-item { color: $sm-text; background: $sm-surface; border-color: #edf1f6; }
+.sm-grid .x-grid-cell-inner { padding-top: 16px; padding-bottom: 16px; font-size: 13px; }
+.sm-grid .x-grid-item-over { background: #f5f9ff; }
+.sm-grid .x-grid-item-selected, .sm-grid .x-grid-item-focused { background: #eaf3ff !important; color: $sm-text; }
+.sm-grid .x-grid-item-selected .x-grid-cell { background: transparent; }
+.sm-grid .x-toolbar { background: $sm-surface; border-color: $sm-border; padding: 8px 11px; }
+.sm-grid .x-toolbar .x-toolbar-text { color: $sm-muted; }
+.sm-pill { display: inline-block; padding: 5px 11px; line-height: 16px; font-size: 12px; font-weight: 700; border-radius: 99px; white-space: nowrap; }
+.sm-pill-success { background: #def5e8; color: #087d4c; }
+.sm-pill-warning { background: #fff1d6; color: #ab6700; }
+.sm-pill-info { background: #e6f0ff; color: #2265c2; }
+.sm-pill-muted { background: #eef1f6; color: #63718a; }
+.sm-avatar { display: inline-flex; align-items: center; justify-content: center; width: 31px; height: 31px; margin-right: 9px; vertical-align: middle; border-radius: 50%; background: #dcecff; color: #176ad5; font-size: 11px; font-weight: 800; }
+.sm-name { font-weight: 700; color: $sm-text; }
+.sm-doc-link { display: inline-flex; width: 32px; height: 32px; align-items: center; justify-content: center; border-radius: 9px; background: #eff5ff; color: #1575ef; text-decoration: none; font-size: 16px; }
+.sm-doc-link:hover { background: #dceaff; }
+.sm-doc-link-jd { background: #f9eefa; color: #a33cb6; }
+.sm-doc-link-jd:hover { background: #f3e0f6; }
+.sm-window { border: 1px solid $sm-border !important; border-radius: 15px; box-shadow: 0 28px 85px rgba(10, 28, 57, .25); overflow: hidden; }
+.sm-window .x-window-header { background: #fff; border-bottom: 1px solid $sm-border; padding: 17px 20px; }
+.sm-window .x-window-header-title, .sm-window .x-title-text { color: $sm-text; font-size: 19px; font-weight: 750; }
+.sm-window .x-window-body, .sm-window .x-panel-body, .sm-window .x-form-panel-body { background: #fff; }
+.sm-window .x-toolbar-footer { background: #f9fbfe; border-top: 1px solid $sm-border; padding: 12px 17px; }
+.sm-window .x-btn { border-radius: 8px; }
+.sm-window .x-btn-default-small { border-color: $sm-border; background: #f5f8ff; }
+.sm-window .x-btn-default-small .x-btn-inner { color: $sm-primary; font-weight: 700; }
+.sm-window .x-btn-action-small { background: $sm-primary; border-color: $sm-primary; }
+.sm-window .x-btn-action-small .x-btn-inner { color: white; }
+.sm-window .x-form-display-field { color: $sm-text; font-weight: 600; }
+.sm-window .x-form-item-label { color: $sm-muted; font-size: 12px; }
+.sm-window .x-form-field, .sm-window textarea.x-form-field { border-color: $sm-border; border-radius: 7px; }
+.sm-window .x-fieldset { border: 1px solid $sm-border; border-radius: 11px; margin-bottom: 16px; padding: 16px; }
+.sm-window .x-fieldset-header-text { color: $sm-text; font-weight: 700; font-size: 14px; }

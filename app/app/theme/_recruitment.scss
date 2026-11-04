@@ -1,0 +1,18 @@
+// Recruitment-only layout and position details.
+.sm-recruitment { background: $sm-canvas; }
+.sm-recruitment .x-panel-body { background: $sm-canvas; }
+.sm-recruitment .sm-grid { margin: 12px 8px; }
+.sm-recruitment .sm-position-grid { margin-left: 14px; margin-right: 6px; }
+.sm-recruitment .sm-candidate-grid { margin-left: 6px; margin-right: 14px; }
+.sm-position-grid .x-grid-item-selected { box-shadow: inset 4px 0 $sm-primary; }
+.sm-position-title { font-size: 13px; font-weight: 700; color: $sm-text; }
+.sm-position-dept { color: $sm-muted; font-size: 12px; padding-top: 4px; }
+.sm-position-grid .x-grid-cell-inner { padding-top: 17px; padding-bottom: 17px; }
+.sm-details-window .x-form-item { margin-bottom: 12px; }
+.sm-details-window .x-form-item-label { font-size: 12px; color: $sm-muted; }
+.sm-details-window .x-form-display-field { font-size: 14px; }
+.sm-details-window .sm-details-section { background: #f8faff; border: 1px solid #edf2fb; border-radius: 12px; padding: 18px; margin-bottom: 16px; }
+.sm-details-window .sm-details-description { background: #fff; border-top: 1px solid $sm-border; padding-top: 12px; margin-top: 7px; }
+.sm-details-window .sm-details-description textarea { background: #f8faff; resize: none; }
+.sm-details-window .sm-document-section { border-top: 1px solid $sm-border; padding-top: 15px; }
+.sm-candidate-window .x-fieldset { background: #fbfcff; }

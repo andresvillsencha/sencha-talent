@@ -1,0 +1,477 @@
+/* Sencha New Components v2 — Ext JS Classic / Material theme.
+   Scoped styles only: does not affect navigation or components lacking the classes.
+   Edit values below. This CSS is also valid SCSS. */
+:root {
+  --sn-blue: #1677f2;
+  --sn-blue-light: #eaf3ff;
+  --sn-ink: #0c1e42;
+  --sn-muted: #647895;
+  --sn-border: #e2eaf4;
+  --sn-canvas: #f5f8fc;
+  --sn-row-hover: #f5f9ff;
+  --sn-radius: 13px;
+  --sn-shadow: 0 3px 16px rgba(15, 35, 69, .055);
+}
+
+/* Both components: IMPORTANT these rules target Classic's real DOM. */
+.x-panel.sencha-new-grid,
+.x-grid.sencha-new-grid,
+.x-window.sencha-new-window {
+  border: 1px solid var(--sn-border) !important;
+  border-radius: var(--sn-radius) !important;
+  background: #fff !important;
+  box-shadow: var(--sn-shadow) !important;
+  overflow: hidden;
+}
+/* GRID ROOT / header / body */
+.sencha-new-grid .x-panel-header,
+.sencha-new-grid .x-grid-header,
+.sencha-new-grid .x-panel-header-default,
+.sencha-new-grid .x-panel-header-material {
+  background: #fff !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--sn-border) !important;
+  min-height: 72px;
+  padding: 17px 18px !important;
+  box-shadow: none !important;
+}
+.sencha-new-grid .x-panel-header-title,
+.sencha-new-grid .x-title-text,
+.sencha-new-grid .x-panel-header-title-default,
+.sencha-new-grid .x-panel-header-title-material {
+  color: var(--sn-ink) !important;
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  letter-spacing: -.025em;
+}
+.sencha-new-grid .x-grid-header-ct {
+  background: #f7f9fc !important;
+  border: 1px solid var(--sn-border) !important;
+  border-bottom: none !important;
+  border-radius: 8px 8px 0 0;
+  /* margin: 0 10px; */
+}
+.sencha-new-grid .x-column-header,
+.sencha-new-grid .x-column-header-inner {
+  background: transparent !important;
+  color: var(--sn-ink) !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+.sencha-new-grid .x-column-header-inner { padding: 15px 10px !important; }
+.sencha-new-grid .x-column-header-text {
+  font-weight: 700 !important;
+  font-size: 12.5px !important;
+  color: var(--sn-ink) !important;
+}
+.sencha-new-grid .x-grid-body { border: 0 !important; background: #fff !important; }
+.sencha-new-grid .x-grid-item { background: #fff !important; color: var(--sn-ink) !important; }
+.sencha-new-grid .x-grid-item-alt { background: #fff !important; }
+.sencha-new-grid .x-grid-cell { border-bottom: 1px solid #e8edf5 !important; border-right: 0 !important; color: var(--sn-ink) !important; font-size: 13px !important; }
+.sencha-new-grid .x-grid-cell-inner { padding: 16px 10px !important; line-height: 1.55; }
+.sencha-new-grid .x-grid-item-over .x-grid-cell { background: var(--sn-row-hover) !important; }
+.sencha-new-grid .x-grid-item-selected .x-grid-cell { background: var(--sn-blue-light) !important; }
+.sencha-new-grid .x-grid-item-focused .x-grid-cell { outline: none !important; }
+.sencha-new-grid .x-grid-item-selected .x-grid-cell:first-child { box-shadow: inset 4px 0 0 var(--sn-blue); }
+/* Toolbar/footer */
+.sencha-new-grid .x-docked-bottom.x-toolbar,
+.sencha-new-grid .x-docked-bottom.x-toolbar-default,
+.sencha-new-grid .x-docked-bottom.x-toolbar-material {
+  background: #fff !important;
+  border-top: 1px solid var(--sn-border) !important;
+  padding: 12px 14px !important;
+  min-height: 62px;
+}
+.sencha-new-grid .x-toolbar-text,
+.sencha-new-grid .x-paging-info { color: var(--sn-muted) !important; font-size: 13px !important; }
+.sencha-new-grid .x-toolbar .x-btn { border-radius: 8px !important; }
+/* Separate modifier: cards in Ext.view.View, not column-grid rows */
+.sencha-position-list .x-panel-header { border-bottom: 0 !important; }
+.sencha-position-list .x-dataview-item,
+.sencha-position-list .sn-position-card {
+  position: relative; display: block; padding: 17px 20px; margin: 0 11px;
+  border-bottom: 1px solid var(--sn-border); background: #fff; cursor: pointer;
+  font-size: 13px; color: var(--sn-ink);
+}
+.sencha-position-list .x-item-over,
+.sencha-position-list .sn-position-card:hover { background: var(--sn-row-hover); }
+.sencha-position-list .x-item-selected,
+.sencha-position-list .sn-position-card.is-selected { background: #eaf4ff; box-shadow: inset 5px 0 var(--sn-blue); border-radius: 6px; }
+.sn-position-title { font-weight: 700; font-size: 13px; line-height: 1.5; padding-right: 75px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sn-position-meta { color: var(--sn-muted); margin-top: 5px; }
+.sn-position-card .sn-status-badge { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); }
+/* Reusable grid renderer helpers */
+.sn-status-badge { display: inline-flex; align-items: center; justify-content: center; border-radius: 24px; padding: 4px 11px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.sn-status-success { background: #ddf5e8; color: #087444; }
+.sn-status-warning { background: #fff0d5; color: #b96a00; }
+.sn-status-neutral { background: #edf1f6; color: #617085; }
+.sn-status-danger { background: #ffe7e8; color: #b2333e; }
+.sn-avatar { display: inline-flex; vertical-align: middle; align-items: center; justify-content: center; width: 35px; height: 35px; margin-right: 8px; border-radius: 50%; background: #dceaff; color: #166ad1; font-size: 12px; font-weight: 750; }
+.sn-candidate-name { font-weight: 700; color: var(--sn-ink); }
+.sn-file-link { display: inline-flex; align-items: center; justify-content: center; height: 30px; width: 30px; border-radius: 7px; color: var(--sn-blue); text-decoration: none; font-size: 19px; }
+.sn-file-link:hover { background: var(--sn-blue-light); }
+.sn-file-link.sn-jd { color: #973fa3; }
+
+/* WINDOW HEADER / BODY / BOTTOM TOOLBAR */
+.sencha-new-window.x-window { border-radius: 13px !important; }
+.sencha-new-window .x-window-header,
+.sencha-new-window .x-window-header-default,
+.sencha-new-window .x-window-header-material {
+  background: #fff !important; border: 0 !important;
+  border-bottom: 1px solid var(--sn-border) !important;
+  padding: 22px 26px !important;
+  box-shadow: none !important;
+}
+.sencha-new-window .x-window-header-title,
+.sencha-new-window .x-title-text,
+.sencha-new-window .x-window-header-title-default,
+.sencha-new-window .x-window-header-title-material {
+  color: var(--sn-ink) !important; font-size: 23px !important;
+  font-weight: 750 !important; letter-spacing: -.025em;
+}
+.sencha-new-window .x-tool .x-tool-img,
+.sencha-new-window .x-tool-close { opacity: .72; }
+.sencha-new-window .x-window-body { background: #fff !important; color: var(--sn-ink) !important; border: 0 !important; }
+.sencha-new-window .x-docked-bottom.x-toolbar {
+  background: #f8faff !important; border-top: 1px solid var(--sn-border) !important;
+  padding: 12px 20px !important; min-height: 68px;
+}
+.sencha-new-window .x-btn { border-radius: 9px !important; }
+/* Styled HTML inside a Window component's items/html: use with window layout below */
+.sn-detail-content { padding: 12px 22px 20px; font-size: 14px; color: var(--sn-ink); }
+.sn-detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 26px 30px; padding: 23px 24px; background: #f8faff; border-radius: 13px; }
+.sn-detail-field { min-width: 0; }
+.sn-detail-label { display: block; color: var(--sn-muted); font-size: 14px; margin-bottom: 5px; }
+.sn-detail-value { display: block; color: var(--sn-ink); font-size: 15px; font-weight: 600; overflow-wrap: anywhere; }
+.sn-detail-section { padding: 23px 8px; border-bottom: 1px solid var(--sn-border); }
+.sn-detail-section:last-child { border-bottom: none; }
+.sn-attachment { display: flex; align-items: center; gap: 13px; padding: 16px 17px; background: #f5f8fd; border-radius: 11px; color: var(--sn-ink); text-decoration: none; font-weight: 700; overflow-wrap: anywhere; }
+.sn-attachment:hover { background: #edf4ff; }
+.sn-section-heading { color: var(--sn-muted); font-weight: 500; font-size: 14px; margin-bottom: 10px; }
+@media (max-width: 650px) { .sn-detail-grid { grid-template-columns: 1fr; } .sn-detail-content { padding: 12px; } }
+
+/* =============================================
+   POSITION DETAILS WINDOW
+   Ext JS Classic / Material
+   ============================================= */
+
+/* WINDOW */
+.x-window.sn-position-window {
+    background: #fff !important;
+    border: 1px solid #e2eaf4 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 24px 70px rgba(12, 30, 66, .20) !important;
+    overflow: hidden;
+}
+
+/* HEADER */
+.sn-position-window .x-window-header {
+    background: #fff !important;
+    border: none !important;
+    border-bottom: 1px solid #e6edf6 !important;
+    padding: 20px 26px !important;
+    min-height: 88px;
+}
+
+.sn-position-window .x-window-header-title,
+.sn-position-window .x-window-header .x-title-text {
+    color: #0c1e42 !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+
+/* Header icon */
+.sn-position-window .x-window-header .x-title-icon,
+.sn-position-window .x-window-header .x-title-icon-wrap {
+    color: #1677f2 !important;
+    font-size: 22px !important;
+}
+
+/* BODY */
+.sn-position-window .x-window-body,
+.sn-position-window .sn-position-form,
+.sn-position-window .sn-position-form .x-panel-body {
+    background: #fff !important;
+    border: none !important;
+}
+
+/* OVERVIEW PANEL */
+.sn-position-window .sn-position-overview {
+    background: #f7f9fc !important;
+    border-radius: 14px;
+    padding: 24px 22px 8px;
+    margin-bottom: 14px;
+}
+
+.sn-position-window .sn-position-column {
+    padding: 0 10px;
+    min-width: 0;
+}
+
+/* FIELD LAYOUT */
+.sn-position-window .sn-position-field {
+    position: relative;
+    padding-left: 66px;
+    min-height: 74px;
+    margin-bottom: 14px !important;
+    box-sizing: border-box;
+}
+
+
+
+/* Field values */
+.sn-position-window .x-form-display-field {
+    color: #0c1e42 !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 1.55 !important;
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   POSITION FIELD CONTAINERS
+   ===================================================== */
+
+.sn-position-window .sn-position-field-container {
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+/* =====================================================
+   INDEPENDENT FONT AWESOME ICONS
+   ===================================================== */
+
+.sn-position-window .sn-position-field-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-right: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #eaf2ff;
+    color: #1677f2;
+
+    font-size: 22px;
+    flex-shrink: 0;
+
+    box-sizing: border-box;
+}
+
+.sn-position-window .sn-position-field-icon .x-fa {
+    color: inherit;
+    font-size: 22px;
+}
+
+/* =====================================================
+   DISPLAY FIELDS
+   ===================================================== */
+
+.sn-position-window .sn-position-field,
+.sn-position-window .sn-position-section-field {
+    min-width: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    position: relative;
+}
+
+/* Labels */
+
+.sn-position-window .sn-position-field .x-form-item-label,
+.sn-position-window .sn-position-section-field .x-form-item-label {
+    color: #64748b;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    padding-left: 0;
+}
+
+/* Values */
+
+.sn-position-window .sn-position-field .x-form-display-field,
+.sn-position-window .sn-position-section-field .x-form-display-field {
+    color: #0c1e42;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+
+    overflow-wrap: anywhere;
+}
+
+/* =====================================================
+   DESCRIPTION AND DOCUMENTS
+   ===================================================== */
+
+.sn-position-window .sn-position-section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sn-position-window .sn-position-section-field {
+    min-width: 0;
+}
+
+/* PDF document interaction */
+
+.sn-position-window .sn-position-file {
+    cursor: pointer;
+}
+
+.sn-position-window .sn-position-file:hover
+.sn-position-filename {
+    color: #1677f2;
+    text-decoration: underline;
+}
+
+/* =============================================
+   FOOTER + BUTTON
+   ============================================= */
+
+.sn-position-window .x-docked-bottom.x-toolbar {
+    background: #f9fbff !important;
+    border-top: 1px solid #e2eaf4 !important;
+    padding: 15px 25px !important;
+    min-height: 76px;
+}
+
+.sn-position-window .sn-position-close-btn.x-btn {
+    background: #f3f7fd !important;
+    border: 1px solid #dce6f5 !important;
+    border-radius: 10px !important;
+
+    min-width: 115px;
+    min-height: 44px;
+
+    box-shadow: none !important;
+}
+
+.sn-position-window .sn-position-close-btn .x-btn-inner {
+    color: #1677f2 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+}
+
+.sn-position-window .sn-position-close-btn.x-btn-over {
+    background: #e6f0ff !important;
+}
+
+/* Smooth transition for clickable InfoFields */
+.sn-infofield-clickable {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Rollover effect */
+.sn-infofield-clickable:hover {
+    background-color: #edf5ff;
+}
+
+
+
+
+
+
+
+/* ==========================================
+   CANDIDATE DETAILS WINDOW
+   ========================================== */
+
+.sn-candidate-window .sn-candidate-form {
+    background: #f8fafc;
+}
+
+/* Section cards */
+.sn-candidate-window .sn-position-overview {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+/* Section headers */
+.sn-candidate-window .sn-position-section-title {
+    color: #0f172a;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sn-candidate-window .sn-position-section-title i {
+    color: #1677f2;
+    margin-right: 8px;
+}
+
+/* InfoField spacing */
+.sn-candidate-window .sn-position-field {
+    min-width: 0;
+}
+
+/* Document buttons */
+.sn-candidate-window .sn-candidate-document-btn {
+    background: #f8fafc;
+    border: 1px solid #dce5f0;
+    border-radius: 9px;
+    color: #334155;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.sn-candidate-window .sn-candidate-document-btn
+.x-btn-inner {
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sn-candidate-window .sn-candidate-document-btn
+.x-btn-icon-el {
+    color: #1677f2;
+    font-size: 16px;
+}
+
+/* Hover effects for document buttons */
+.sn-candidate-window .sn-candidate-document-btn:hover {
+    background: #eff6ff;
+    border-color: #93c5fd;
+}
+
+.sn-candidate-window .sn-candidate-document-btn:hover
+.x-btn-inner {
+    color: #1d4ed8;
+}
+
+/* AI section */
+.sn-candidate-window .sn-candidate-ai-section {
+    border-color: #dbeafe;
+    background: #ffffff;
+}
+
+.sn-candidate-window .sn-candidate-ai-section
+.sn-position-section-title i {
+    color: #2563eb;
+}
+
+/* Long values and summary text */
+.sn-candidate-window .sn-position-field .x-form-display-field {
+    overflow-wrap: anywhere;
+    white-space: normal;
+    line-height: 1.5;
+}
+
+/* Footer */
+.sn-candidate-window .x-toolbar-footer {
+    border-top: 1px solid #e2e8f0;
+    background: #ffffff;
+    padding: 14px 20px;
+}

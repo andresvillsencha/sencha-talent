@@ -1,0 +1,15 @@
+// Scoped to our own UI; avoid changing Ext layout engine measurements.
+body, .x-body { background: $sm-canvas; color: $sm-text; font-family: Inter, 'Segoe UI', Arial, sans-serif; }
+.sm-app { background: $sm-canvas; }
+.sm-app .x-tab-bar { background: $sm-surface; border-bottom: 1px solid $sm-border; }
+.sm-app .x-tab { background: transparent; border: 0; border-radius: 0; }
+.sm-app .x-tab .x-tab-inner { color: $sm-muted; font-weight: 600; }
+.sm-app .x-tab-active .x-tab-inner { color: $sm-primary; }
+.sm-app .x-tab-active { box-shadow: inset 0 -3px $sm-primary; }
+.sm-app .x-tab-over { background: #f3f8ff; }
+.sm-app .x-panel-body { background: transparent; }
+.sm-app .x-tabpanel-child { background: transparent; }
+.sm-app .x-panel-header { background: transparent; }
+.sm-app .x-panel-header-title { color: $sm-text; }
+.sm-app .x-tab-icon-el { color: $sm-muted; }
+.sm-app .x-tab-active .x-tab-icon-el { color: $sm-primary; }
